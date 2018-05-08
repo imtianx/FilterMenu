@@ -184,7 +184,7 @@ class FilterMenu @JvmOverloads constructor(context: Context, attrs: AttributeSet
         }
     }
 
-    private fun closeMenu() {
+    fun closeMenu() {
         if (this.getChildAt(3) != null) {
             removeView(containerView)
         }

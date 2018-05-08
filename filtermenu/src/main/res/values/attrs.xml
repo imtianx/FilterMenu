@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FilterMenu">
+        
+        <attr name="underlineColor" format="color"/>
+        <attr name="dividerColor" format="color"/>
+        <attr name="tabSelectedColor" format="color"/>
+        <attr name="tabUnselectedColor" format="color"/>
+        <attr name="menuBgColor" format="color"/>
+        <attr name="maskColor" format="color"/>
+        <attr name="menuTextSize" format="dimension"/>
+        <attr name="menuSelectedIcon" format="reference"/>
+        <attr name="menuUnSelectedIcon" format="reference"/>
+        <attr name="menuMenuHeightPercent" format="float"/>
+        <attr name="tabHeight" format="float"/>
+    </declare-styleable>
+</resources>

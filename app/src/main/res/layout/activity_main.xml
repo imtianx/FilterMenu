@@ -6,13 +6,35 @@
                                              android:layout_height="match_parent"
                                              tools:context=".MainActivity">
     
-    <TextView
-        android:layout_width="wrap_content"
+    
+    <cn.imtianx.filtermenu.FilterMenu
+        android:id="@+id/filterMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:dividerColor="@color/gray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:maskColor="#88888888"
+        app:menuBgColor="@color/white"
+        app:menuSelectedIcon="@mipmap/fm_selected_icon"
+        app:menuTextSize="13sp"
+        app:menuUnSelectedIcon="@mipmap/fm_unselected_icon"
+        app:tabSelectedColor="@color/drop_down_selected"
+        app:tabUnselectedColor="@color/drop_down_unselected"
+        app:underlineColor="@color/gray">
+    
+    </cn.imtianx.filtermenu.FilterMenu>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/filterMenu"
+        app:layout_constraintRight_toRightOf="@id/filterMenu"
+        app:layout_constraintTop_toBottomOf="@id/filterMenu">
+    
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

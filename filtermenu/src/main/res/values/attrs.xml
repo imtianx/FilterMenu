@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="FilterMenu">
+    <declare-styleable name="FilterMenuView">
         
         <attr name="underlineColor" format="color"/>
         <attr name="dividerColor" format="color"/>

@@ -17,9 +17,9 @@ import android.widget.TextView
  *     @desc: 下拉筛选控件
  * </pre>
  * @author imtianx
- * @date 2018/5/6 下午4:23
+ * @date 2018/5/3 下午4:23
  */
-class FilterMenu @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+class FilterMenuView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
     : LinearLayout(context, attrs, defStyleAttr) {
 
     private val tabMenuView: LinearLayout
@@ -54,17 +54,17 @@ class FilterMenu @JvmOverloads constructor(context: Context, attrs: AttributeSet
         var underlineColor = dividerColor
 
         // add custom attrs
-        val a = context.obtainStyledAttributes(attrs, R.styleable.FilterMenu)
-        underlineColor = a.getColor(R.styleable.FilterMenu_underlineColor, underlineColor)
-        dividerColor = a.getColor(R.styleable.FilterMenu_dividerColor, dividerColor)
-        tabSelectColor = a.getColor(R.styleable.FilterMenu_tabSelectedColor, tabSelectColor)
-        tabUnSelectColor = a.getColor(R.styleable.FilterMenu_tabUnselectedColor, tabUnSelectColor)
-        menuBgColor = a.getColor(R.styleable.FilterMenu_menuBgColor, menuBgColor)
-        maskColor = a.getColor(R.styleable.FilterMenu_maskColor, maskColor)
-        menuTextSize = a.getDimensionPixelSize(R.styleable.FilterMenu_menuTextSize, menuTextSize)
-        menuSelectedIcon = a.getResourceId(R.styleable.FilterMenu_menuSelectedIcon, R.mipmap.fm_selected_icon)
-        menuUnSelectedIcon = a.getResourceId(R.styleable.FilterMenu_menuUnSelectedIcon, R.mipmap.fm_unselected_icon)
-        tabHeight = a.getDimensionPixelSize(R.styleable.FilterMenu_tabHeight,dp2px(tabHeight.toFloat()))
+        val a = context.obtainStyledAttributes(attrs, R.styleable.FilterMenuView)
+        underlineColor = a.getColor(R.styleable.FilterMenuView_underlineColor, underlineColor)
+        dividerColor = a.getColor(R.styleable.FilterMenuView_dividerColor, dividerColor)
+        tabSelectColor = a.getColor(R.styleable.FilterMenuView_tabSelectedColor, tabSelectColor)
+        tabUnSelectColor = a.getColor(R.styleable.FilterMenuView_tabUnselectedColor, tabUnSelectColor)
+        menuBgColor = a.getColor(R.styleable.FilterMenuView_menuBgColor, menuBgColor)
+        maskColor = a.getColor(R.styleable.FilterMenuView_maskColor, maskColor)
+        menuTextSize = a.getDimensionPixelSize(R.styleable.FilterMenuView_menuTextSize, menuTextSize)
+        menuSelectedIcon = a.getResourceId(R.styleable.FilterMenuView_menuSelectedIcon, R.mipmap.fm_selected_icon)
+        menuUnSelectedIcon = a.getResourceId(R.styleable.FilterMenuView_menuUnSelectedIcon, R.mipmap.fm_unselected_icon)
+        tabHeight = a.getDimensionPixelSize(R.styleable.FilterMenuView_tabHeight,dp2px(tabHeight.toFloat()))
         a.recycle()
 
         // add top line

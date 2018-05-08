@@ -12,6 +12,6 @@
         <attr name="menuSelectedIcon" format="reference"/>
         <attr name="menuUnSelectedIcon" format="reference"/>
         <attr name="menuMenuHeightPercent" format="float"/>
-        <attr name="tabHeight" format="float"/>
+        <attr name="tabHeight" format="dimension"/>
     </declare-styleable>
 </resources>

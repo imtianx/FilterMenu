@@ -41,9 +41,10 @@ class FilterMenu @JvmOverloads constructor(context: Context, attrs: AttributeSet
     private var menuSelectedIcon: Int
     private var menuUnSelectedIcon: Int
 
+    private var tabHeight = 44
+
     val isShow: Boolean
         get() = (curTabPosition != -1)
-
 
     init {
 
@@ -63,6 +64,7 @@ class FilterMenu @JvmOverloads constructor(context: Context, attrs: AttributeSet
         menuTextSize = a.getDimensionPixelSize(R.styleable.FilterMenu_menuTextSize, menuTextSize)
         menuSelectedIcon = a.getResourceId(R.styleable.FilterMenu_menuSelectedIcon, R.mipmap.fm_selected_icon)
         menuUnSelectedIcon = a.getResourceId(R.styleable.FilterMenu_menuUnSelectedIcon, R.mipmap.fm_unselected_icon)
+        tabHeight = a.getDimensionPixelSize(R.styleable.FilterMenu_tabHeight,dp2px(tabHeight.toFloat()))
         a.recycle()
 
         // add top line
@@ -139,7 +141,7 @@ class FilterMenu @JvmOverloads constructor(context: Context, attrs: AttributeSet
 
     private fun addTab(tabHeaders: List<String>, index: Int) {
         val tabView = View.inflate(context, R.layout.layout_filter_menu_tab, null)
-        tabView.layoutParams = LinearLayout.LayoutParams(0, dp2px(44f), 1.0f)
+        tabView.layoutParams = LinearLayout.LayoutParams(0,tabHeight, 1.0f)
         val tab = getTabTextView(tabView)
         tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize.toFloat())
         tab.setTextColor(tabUnSelectColor)

@@ -64,12 +64,13 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
         menuTextSize = a.getDimensionPixelSize(R.styleable.FilterMenuView_menuTextSize, menuTextSize)
         menuSelectedIcon = a.getResourceId(R.styleable.FilterMenuView_menuSelectedIcon, R.mipmap.fm_selected_icon)
         menuUnSelectedIcon = a.getResourceId(R.styleable.FilterMenuView_menuUnSelectedIcon, R.mipmap.fm_unselected_icon)
-        tabHeight = a.getDimensionPixelSize(R.styleable.FilterMenuView_tabHeight,dp2px(tabHeight.toFloat()))
+        tabHeight = a.getDimensionPixelSize(R.styleable.FilterMenuView_tabHeight, dp2px(tabHeight.toFloat()))
         a.recycle()
 
         // add top line
         val topLine = View(getContext())
-        topLine.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, dp2px(1.5f))
+        topLine.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                dp2px(1f))
         topLine.setBackgroundColor(underlineColor)
         addView(topLine, 0)
 
@@ -86,7 +87,7 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
         // add bottom line
         val bottomLine = View(getContext())
         bottomLine.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                dp2px(1.5f))
+                dp2px(1f))
         bottomLine.setBackgroundColor(underlineColor)
         addView(bottomLine, 2)
 
@@ -141,7 +142,7 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
 
     private fun addTab(tabHeaders: List<String>, index: Int) {
         val tabView = View.inflate(context, R.layout.layout_filter_menu_tab, null)
-        tabView.layoutParams = LinearLayout.LayoutParams(0,tabHeight, 1.0f)
+        tabView.layoutParams = LinearLayout.LayoutParams(0, tabHeight, 1.0f)
         val tab = getTabTextView(tabView)
         tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize.toFloat())
         tab.setTextColor(tabUnSelectColor)

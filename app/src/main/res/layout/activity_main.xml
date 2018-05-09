@@ -7,7 +7,7 @@
                                              tools:context=".MainActivity">
     
     
-    <cn.imtianx.filtermenu.FilterMenu
+    <cn.imtianx.filtermenu.FilterMenuView
         android:id="@+id/filterMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         app:tabUnselectedColor="@color/drop_down_unselected"
         app:underlineColor="@color/gray">
     
-    </cn.imtianx.filtermenu.FilterMenu>
+    </cn.imtianx.filtermenu.FilterMenuView>
     
     <LinearLayout
         android:layout_width="match_parent"

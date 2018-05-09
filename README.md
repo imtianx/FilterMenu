@@ -1,5 +1,12 @@
 # FilterMenu
 
+[![License](https://img.shields.io/github/license/imtianx/FilterMenu.svg)](https://github.com/imtianx/FilterMenu/blob/master/LICENSE) 
+[![Stars](https://img.shields.io/github/stars/imtianx/FilterMenu.svg)](https://github.com/imtianx/FilterMenu/stargazers) 
+[![Forks](https://img.shields.io/github/forks/imtianx/FilterMenu.svg)](https://github.com/imtianx/FilterMenu/network) 
+[![Issues](https://img.shields.io/github/issues/imtianx/FilterMenu.svg)](https://github.com/imtianx/FilterMenu/issues) 
+
+---
+
 **First**,you can dependency using the code:
 
 ```

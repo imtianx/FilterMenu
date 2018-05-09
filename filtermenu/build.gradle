@@ -39,4 +39,4 @@ dependencies {
 
 
 // upload to jcenter
-apply from: '../jcenter-push.gradle'
+//apply from: '../jcenter-push.gradle'

@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.ListView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,14 +41,24 @@ class MainActivity : AppCompatActivity() {
         girdArea.numColumns = 4
         girdArea.horizontalSpacing = 4
         girdArea.verticalSpacing = 4
-        areaAdapter = FilterMenuListAdapter(data = areaData.toList())
+
+        val areaDtas = ArrayList<MenuItemData>()
+        areaData.forEach {
+            areaDtas.add(MenuItemData("",it))
+        }
+        areaAdapter = FilterMenuListAdapter(data = areaDtas)
         girdArea.adapter = areaAdapter
 
         val listSort = ListView(this)
         listSort.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT)
         listSort.setBackgroundColor(Color.WHITE)
-        sortAdapter = FilterMenuListAdapter(data = sortData.toList())
+
+        val sortDtas = ArrayList<MenuItemData>()
+        sortData.forEach {
+            sortDtas.add(MenuItemData("",it))
+        }
+        sortAdapter = FilterMenuListAdapter(data = sortDtas)
         listSort.dividerHeight = 0
         listSort.adapter = sortAdapter
 

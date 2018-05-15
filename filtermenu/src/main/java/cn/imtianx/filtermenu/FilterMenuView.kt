@@ -43,6 +43,8 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
 
     private var tabHeight = 44
 
+    private var tabBorderWidth = 0.6f
+
     val isShow: Boolean
         get() = (curTabPosition != -1)
 
@@ -65,19 +67,19 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
         menuSelectedIcon = a.getResourceId(R.styleable.FilterMenuView_menuSelectedIcon, R.mipmap.fm_selected_icon)
         menuUnSelectedIcon = a.getResourceId(R.styleable.FilterMenuView_menuUnSelectedIcon, R.mipmap.fm_unselected_icon)
         tabHeight = a.getDimensionPixelSize(R.styleable.FilterMenuView_tabHeight, dp2px(tabHeight.toFloat()))
+        tabBorderWidth = a.getDimension(R.styleable.FilterMenuView_tabBorderWidth, tabBorderWidth)
         a.recycle()
 
         // add top line
         val topLine = View(getContext())
         topLine.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                dp2px(0.5f))
+                dp2px(tabBorderWidth))
         topLine.setBackgroundColor(underlineColor)
         addView(topLine, 0)
 
         //add tab menu
         tabMenuView = LinearLayout(context)
-        val params = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT)
+        val params = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, tabHeight)
         tabMenuView.orientation = LinearLayout.HORIZONTAL
         tabMenuView.gravity = Gravity.CENTER
         tabMenuView.setBackgroundColor(menuBgColor)
@@ -87,7 +89,7 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
         // add bottom line
         val bottomLine = View(getContext())
         bottomLine.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                dp2px(0.5f))
+                dp2px(tabBorderWidth))
         bottomLine.setBackgroundColor(underlineColor)
         addView(bottomLine, 2)
 
@@ -142,7 +144,8 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
 
     private fun addTab(tabHeaders: List<String>, index: Int) {
         val tabView = View.inflate(context, R.layout.layout_filter_menu_tab, null)
-        tabView.layoutParams = LinearLayout.LayoutParams(0, tabHeight, 1.0f)
+        tabView.layoutParams = LinearLayout.LayoutParams(0,
+                ViewGroup.LayoutParams.MATCH_PARENT, 1.0f)
         val tab = getTabTextView(tabView)
         tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize.toFloat())
         tab.setTextColor(tabUnSelectColor)

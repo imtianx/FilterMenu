@@ -13,5 +13,6 @@
         <attr name="menuUnSelectedIcon" format="reference"/>
         <attr name="menuMenuHeightPercent" format="float"/>
         <attr name="tabHeight" format="dimension"/>
+        <attr name="tabBorderWidth" format="dimension"/>
     </declare-styleable>
 </resources>

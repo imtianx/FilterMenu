@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="48dp"
         android:background="@color/colorPrimary">
     
     </LinearLayout>
@@ -20,11 +20,11 @@
         android:layout_height="wrap_content"
         app:dividerColor="@color/colorAccent"
         app:maskColor="#88888888"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         app:menuBgColor="@color/white"
         app:menuSelectedIcon="@mipmap/fm_selected_icon"
         app:menuTextSize="13sp"
+        app:tabHeight="48dp"
+        app:tabBorderWidth="1dp"
         app:menuUnSelectedIcon="@mipmap/fm_unselected_icon"
         app:tabSelectedColor="@color/drop_down_selected"
         app:tabUnselectedColor="@color/drop_down_unselected"

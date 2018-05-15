@@ -70,7 +70,7 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
         // add top line
         val topLine = View(getContext())
         topLine.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                dp2px(1f))
+                dp2px(0.5f))
         topLine.setBackgroundColor(underlineColor)
         addView(topLine, 0)
 
@@ -87,7 +87,7 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
         // add bottom line
         val bottomLine = View(getContext())
         bottomLine.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                dp2px(1f))
+                dp2px(0.5f))
         bottomLine.setBackgroundColor(underlineColor)
         addView(bottomLine, 2)
 
@@ -155,8 +155,10 @@ class FilterMenuView @JvmOverloads constructor(context: Context, attrs: Attribut
         // add line
         if (index < tabHeaders.size - 1) {
             val view = View(context)
-            view.layoutParams = LinearLayout.LayoutParams(dp2px(0.5f),
+            val layoutParams = LinearLayout.LayoutParams(dp2px(0.5f),
                     ViewGroup.LayoutParams.MATCH_PARENT)
+            layoutParams.setMargins(0, dp2px(tabHeight / 8f), 0, dp2px(tabHeight / 8f))
+            view.layoutParams = layoutParams
             view.setBackgroundColor(dividerColor)
             tabMenuView.addView(view)
         }

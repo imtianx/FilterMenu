@@ -5,7 +5,7 @@ def siteUrl = 'https://github.com/imtianx/FilterMenu'
 def gitUrl = 'https://github.com/imtianx/FilterMenu.git'
 
 group = 'cn.imtianx.andlib'
-version = '1.0.0'
+version = '1.0.1'
 
 install {
     repositories.mavenInstaller {
@@ -70,7 +70,7 @@ bintray {
     configurations = ['archives']
     pkg {
         version {
-            name = '1.0.0'
+            name = '1.0.1'
             desc = 'custom filter menu for android using kotlin'
         }
         repo = 'maven'

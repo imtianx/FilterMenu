@@ -5,9 +5,10 @@
 version: 2
 jobs:
   build:
-          working_directory: ~/code
+    working_directory: ~/code
     docker:
-      - image: circleci/android:api-25-alpha
+      # https://circleci.com/docs/2.0/circleci-images/#android
+      - image: circleci/android:api-27-alpha
       
     environment:
       JVM_OPTS: -Xmx3200m

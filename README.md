@@ -4,7 +4,8 @@
 [![Stars](https://img.shields.io/github/stars/imtianx/FilterMenu.svg)](https://github.com/imtianx/FilterMenu/stargazers) 
 [![Forks](https://img.shields.io/github/forks/imtianx/FilterMenu.svg)](https://github.com/imtianx/FilterMenu/network) 
 [![Issues](https://img.shields.io/github/issues/imtianx/FilterMenu.svg)](https://github.com/imtianx/FilterMenu/issues) 
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d53925d5e52a46f489a677b66e0c5929)](https://www.codacy.com/app/imtianx/FilterMenu?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=imtianx/FilterMenu&amp;utm_campaign=Badge_Grade)
+[![CircleCI](https://circleci.com/gh/imtianx/FilterMenu.svg?style=svg)](https://circleci.com/gh/imtianx/FilterMenu)
 ---
 
 

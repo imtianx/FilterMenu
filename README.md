@@ -24,7 +24,7 @@ the simple :
 implementation 'cn.imtianx.andlib:filtermenu:1.0.1'
 ```
 
-> if you want use aar or jar ,please [ click here](https://bintray.com/xing/maven/filtermenu/1.0.1#files/cn%2Fimtianx%2Fandlib%2Ffiltermenu%2F1.0.1) to download ,or [go to here](https://dl.bintray.com/xing/maven/cn/imtianx/andlib/filtermenu/) to select the version what you want 
+> if you want to  use aar or jar ,please [ click here](https://bintray.com/xing/maven/filtermenu/1.0.1#files/cn%2Fimtianx%2Fandlib%2Ffiltermenu%2F1.0.1) to download ,or [go to here](https://dl.bintray.com/xing/maven/cn/imtianx/andlib/filtermenu/) to select the version what you want 
 
 **Second**、please reference the sample code :[MainActivity](https://github.com/imtianx/FilterMenu/blob/master/app/src/main/java/cn/imtianx/filtermenu/MainActivity.kt)
 
@@ -33,7 +33,7 @@ implementation 'cn.imtianx.andlib:filtermenu:1.0.1'
 ## LICENSE
 
 ```
-   Copyright 2018 imtianx
+   Copyright 2018 by imtianx
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

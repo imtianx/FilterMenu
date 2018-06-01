@@ -5,9 +5,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     defaultConfig {
-        applicationId "cn.imtianx.filtermenu"
+        applicationId "cn.imtianx.simple"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
@@ -15,10 +15,35 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+
+    signingConfigs {
+        release {
+            keyAlias 'imtianx'
+            keyPassword 'dev@Tx.666'
+            storeFile file('../imtianx.jks')
+            storePassword 'dev@Tx.666'
+        }
+
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def SEP = "_"
+                    def project = "filtermenu"
+                    def buildType = variant.variantData.variantConfiguration.buildType.name
+                    def date = new Date()
+                    def version = variant.versionName
+                    def formattedDate = date.format('yyMMdd_HHmm')
+
+                    def newApkName = project + SEP + buildType + SEP +version + ".apk"
+                    outputFileName = newApkName
+                }
+            }
         }
     }
 }
@@ -32,6 +57,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(':filtermenu')
-//    implementation 'cn.imtianx.andlib:filtermenu:1.0.0'
+    //    implementation project(':filtermenu')
+    implementation 'cn.imtianx.andlib:filtermenu:1.0.1'
 }

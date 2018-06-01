@@ -9,8 +9,10 @@ android:
     - platform-tools
     - tools
     
-    - build-tools-26.0.2
-    - android-26
+    - build-tools-$ANDROID_BUILD_TOOLS
+    - android-$ANDROID_API
+    - android-$EMULATOR_API
+    
     - extra-android-m2repository
     - extra-google-m2repository
     - extra-android-support

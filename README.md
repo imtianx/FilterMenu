@@ -12,7 +12,7 @@
 
 the simple :
 
-![](https://github.com/imtianx/FilterMenu/art/simple.gif)
+![](https://github.com/imtianx/FilterMenu/blob/master/art/simple.gif)
 
 ---
 

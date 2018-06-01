@@ -1,4 +1,4 @@
-package cn.imtianx.filtermenu
+package cn.imtianx.simple
 
 import org.junit.Test
 

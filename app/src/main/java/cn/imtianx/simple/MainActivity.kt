@@ -1,4 +1,4 @@
-package cn.imtianx.filtermenu
+package cn.imtianx.simple
 
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
@@ -9,6 +9,8 @@ import android.widget.AdapterView
 import android.widget.GridView
 import android.widget.LinearLayout
 import android.widget.ListView
+import cn.imtianx.filtermenu.FilterMenuListAdapter
+import cn.imtianx.filtermenu.MenuItemData
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         val areaDtas = ArrayList<MenuItemData>()
         areaData.forEach {
-            areaDtas.add(MenuItemData("",it))
+            areaDtas.add(MenuItemData("", it))
         }
         areaAdapter = FilterMenuListAdapter(data = areaDtas)
         girdArea.adapter = areaAdapter
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         val sortDtas = ArrayList<MenuItemData>()
         sortData.forEach {
-            sortDtas.add(MenuItemData("",it))
+            sortDtas.add(MenuItemData("", it))
         }
         sortAdapter = FilterMenuListAdapter(data = sortDtas)
         listSort.dividerHeight = 0

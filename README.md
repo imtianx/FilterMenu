@@ -21,9 +21,11 @@ the simple :
 
 **First**,you can dependency using the code:
 
+```diff
+- implementation 'cn.imtianx.andlib:filtermenu:1.0.1'
++ implementation 'cn.imtianx:filtermenu:1.0.0'
 ```
-implementation 'cn.imtianx.andlib:filtermenu:1.0.1'
-```
+
 
 > if you want to  use aar or jar ,please [ click here](https://bintray.com/xing/maven/filtermenu/1.0.1#files/cn%2Fimtianx%2Fandlib%2Ffiltermenu%2F1.0.1) to download ,or [go to here](https://dl.bintray.com/xing/maven/cn/imtianx/andlib/filtermenu/) to select the version what you want 
 

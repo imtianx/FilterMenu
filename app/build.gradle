@@ -36,28 +36,25 @@ android {
                     def SEP = "_"
                     def project = "filtermenu"
                     def buildType = variant.variantData.variantConfiguration.buildType.name
-                    def date = new Date()
                     def version = variant.versionName
-                    def formattedDate = date.format('yyMMdd_HHmm')
-
-                    def newApkName = project + SEP + buildType + SEP +version + ".apk"
+                    def newApkName = project + SEP + buildType + SEP + version + ".apk"
                     outputFileName = newApkName
                 }
             }
         }
     }
-    
+
     lintOptions {
-         abortOnError false
-     }
+        abortOnError false
+    }
 }
 
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation "com.android.support:appcompat-v7:$project.version_support"
+    implementation "com.android.support.constraint:constraint-layout:$project.version_constraint_layout"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
